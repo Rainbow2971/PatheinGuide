@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="places.css">
+</head>
+<body>
+  <div class="header">
+    <div class="navbar">
+      <div class="logo">LOGO</div>
+      <div class="navitem">
+        <a class="active">Home</a>
+        <a class="hover" style="padding-left:3rem;">Places</a>
+        <a class="hover" style="padding-left:3rem;">Products</a>
+        <a class="hover" style="padding-left:3rem;">About Us</a>
+        <a class="hover" style="padding-left:3rem;">Contact Us</a>
+      </div>
+  </div>
+  <input
+          type="search"
+          id="myInput" onkeyup="myFunction()"
+          id="search-input"
+          placeholder="Search name here.."
+        />
+  </div>  
+
+  
+  <h2>Resorts</h2>
+<div id="test"> 
+ 
+  <span>
+<div id="rec">
+        <div id="photo">
+          <img src="photos/myomazay.jpg" alt="Lights" style="width:100%; height: 100%; border-radius: 5px;">
+        </div>
+        <div id="content">
+        <h4 style="margin-top: 1rem;">Mountains</h4>
+        <p>Lorem ipsum </p>
+        <a href="contactus.html">
+          <button style="width:80px;height: 30px; background-color: transparent; 
+          border:1px solid #000;">Discover</button></a>
+      </div>
+     
+  
+</div>
+</span>
+
+
+<span>
+  <div id="rec">
+          <div id="photo">
+            <img src="photos/myomazay.jpg" alt="Lights" style="width:100%; height: 100%; border-radius: 5px;">
+          </div>
+          <div id="content">
+          <h4 style="margin-top: 1rem;">Hello</h4>
+          <p>Lorem ipsum </p>
+          <a href="contactus.html">
+            <button style="width:80px;height: 30px; background-color: transparent; 
+            border:1px solid #000;">Discover</button></a>
+        </div>  
+    </div>
+  </span>
+  <span>
+    <div id="rec">
+            <div id="photo">
+              <img src="photos/myomazay.jpg" alt="Lights" style="width:100%; height: 100%; border-radius: 5px;">
+            </div>
+            <div id="content">
+            <h4 style="margin-top: 1rem;">World</h4>
+            <p>Lorem ipsum </p>
+            <a href="contactus.html">
+              <button style="width:80px;height: 30px; background-color: transparent; 
+              border:1px solid #000;">Discover</button></a>
+          </div>
+         </div>
+    </span>
+    <center><button style="width:80px;height: 30px; background-color: transparent; 
+      border:1px solid #000;"></button></center>
+</div>
+
+
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("test");
+    li = ul.getElementsByTagName("span");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("h4")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+
+</script>
+
+</body>
+</html>
